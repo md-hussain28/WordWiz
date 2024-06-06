@@ -1,0 +1,262 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and HTML styles */
+body, html {
+    background: linear-gradient(to left, #00ffc1, #1bd1da);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease forwards;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logoimg{
+    width: 35px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #00ffc1;
+}
+
+/* Container styles */
+.container {
+    width: 90%; /* Set width to 90% of the viewport */
+    max-width: 1000px;
+    margin: 60px auto 750px; /* Ensure margin-top is adjusted to clear the navbar */
+    padding: 20px;
+    background: linear-gradient(to right, #00ffc1, #1bd1da);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-out; /* Fade-in animation */
+    flex: 1; /* Allow container to expand and fill available space */
+}
+
+/* Footer styles */
+footer {
+    background: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; /* Ensure footer takes the full width of the page */
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container p {
+    margin: 10px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffdd57;
+}
+
+/* Heading styles */
+h1 { 
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Textarea styles */
+textarea {
+    width: 100%;
+    min-height: 200px; /* Set minimum height */
+    max-height: 410px; /* Set maximum height */
+    border: 1px solid #45ff51;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    resize: none; /* Disable manual resizing */
+    background-color: #eaf6f99e; /* Slate-type color */
+    transition: box-shadow 0.3s; /* Smooth transition for box-shadow */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds height */
+}
+
+/* Hover effect */
+textarea:hover {
+    box-shadow: 0 0 10px rgba(0, 128, 255, 0.5); /* Glow effect on hover */
+}
+
+/* Reset Button Styling */
+.button {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.styled-reset-button {
+    background-color: #ff8a00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.styled-reset-button:hover {
+    background-color: #da1b60;
+    transform: scale(1.05);
+}
+
+/* Statistics item styles */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f9ce5;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 10px; /* Add padding for space around content */
+}
+
+.stats div {
+    text-align: center;
+    color: #040202;
+}
+
+#wordCount,
+#characterCount,
+#readabilityScore {
+    display: inline-block;
+    padding: 5px 5px 5px 5px ;
+    margin: 5px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.s1, .s2, .s3 {
+    margin: 5px;
+    padding: 8px 16px;
+    border-radius: 20px; /* Rounded shape */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    font-weight: bold;
+}
+
+.s1 {
+    background-color: #ff6363; /* Red color */
+    color: white; /* Text color */
+}
+
+.s2 {
+    background-color: #63c3ff; /* Blue color */
+    color: white; /* Text color */
+}
+
+.s3 {
+    background-color: #ffc763; /* Yellow color */
+    color: #333; /* Text color */
+}
+
+/* Hover effect */
+#wordCount:hover,
+#characterCount:hover,
+#readabilityScore:hover {
+    background-color: #ffffff; /* Light gray background on hover */
+}
+
+/* Click effect */
+#wordCount:active,
+#characterCount:active,
+#readabilityScore:active {
+    transform: translateY(1px); /* Push down slightly when clicked */
+}
+
+/* Make stats divs stack vertically on small screens */
+@media (max-width: 580px) {
+    .stats {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+    textarea {
+        max-height: 286px; /* Set maximum height */
+      
+    }
+
+}
+
+/* Animation for fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation keyframes */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

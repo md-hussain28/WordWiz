@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordWizTool</title>
+    <link rel="shortcut icon" href="\images\img.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="\images\logo.jpg" alt="" class="logoimg">
+            <a href="#Web" class="logo">WordCounter</a>
+           
+            <div class="menu">
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Word Counter</h1>
+        <textarea id="textInput" placeholder="Enter your text here..."></textarea>
+
+        <div class="button">
+            <button type="reset" id="resetBtn" class="styled-reset-button">Reset</button>
+        </div>
+
+        <div class="stats">
+            
+            <div class="s1"><span id="wordCount">0</span>: words</div>
+            <div class="s2"><span id="characterCount">0</span>: characters</div>
+            <div class="s3"><span id="readabilityScore">N/A</span>: readability score</div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Word Counter. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
